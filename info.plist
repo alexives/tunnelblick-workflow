@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>mn.ives.alex.tunnelblick.workflow</string>
+	<key>connections</key>
+	<dict>
+		<key>2259C17C-BDAC-460E-BA2A-30619E35563B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5AD5CE33-DA31-45E4-80B5-DA86867D4F87</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>4F1259B6-E316-43D5-8089-6CEFA9AE1C44</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9CF5EFA1-C426-4631-87F6-A33EA8F76746</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Alex Ives</string>
+	<key>description</key>
+	<string>Tasks for the tunnelblick VPN Manager</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Tunnelblick VPN Tasks</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>tell application "Tunnelblick"	connect "{query}"end tell </string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9CF5EFA1-C426-4631-87F6-A33EA8F76746</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>vpn</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading VPN configs</string>
+				<key>script</key>
+				<string>./searchConnection.sh {query}</string>
+				<key>subtext</key>
+				<string>Connect to a VPN configuration.</string>
+				<key>title</key>
+				<string>VPN (Tunnelblick)</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4F1259B6-E316-43D5-8089-6CEFA9AE1C44</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>vpn disconnect</string>
+				<key>subtext</key>
+				<string>Disconnect from all VPN Connections</string>
+				<key>text</key>
+				<string>VPN: Disconnect All</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2259C17C-BDAC-460E-BA2A-30619E35563B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>tell application "Tunnelblick"	disconnect allend tell </string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5AD5CE33-DA31-45E4-80B5-DA86867D4F87</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>2259C17C-BDAC-460E-BA2A-30619E35563B</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>4F1259B6-E316-43D5-8089-6CEFA9AE1C44</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>5AD5CE33-DA31-45E4-80B5-DA86867D4F87</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>9CF5EFA1-C426-4631-87F6-A33EA8F76746</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>alex.ives.mn</string>
+</dict>
+</plist>
